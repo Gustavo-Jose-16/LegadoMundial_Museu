@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-pt="Venda de Ingressos - Legado Mundial" data-en="Ticket Sales - World Legacy">Venda de Ingressos -
+        Legado Mundial</title>
+    <link rel="stylesheet" href="./ingresso.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../global.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("iy-9wAv9g9EH0LQZA"); // Substitua pelo seu User ID
+        })();
+    </script>
+</head>
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+<body>
+
+    <!-- NAVBAR (SEM ALTERAÇÃO) -->
+    <nav class="navbar-1">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div class="logo" data-pt="Legado Mundial" data-en="World Legacy">Legado Mundial</div>
+            <!-- BOTÃO MOBILE -->
+            <button class="menu-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#menu">
+                ☰
+            </button>
+            <ul id="menu" class="menu collapse d-lg-flex">
+                <li><a href="/home/index.html" data-pt="Início" data-en="Home">Início</a></li>
+                <li><a href="/museu/museu.html" data-pt="Museu" data-en="Museum">Museu</a></li>
+                <li><a href="/eventos/eventos.html" data-pt="Eventos" data-en="Events">Eventos</a></li>
+                <li><a href="/exibicao/exibicaoNova.html" data-pt="Exibição" data-en="Exhibition">Exibição</a></li>
+                <li>
+                    <a href="./ingresso.html">
+                        <button class="btn btn-red" data-pt="Ingressos" data-en="Tickets">Ingressos</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <main class="ingresso-main">
+        <section class="page-hero ingresso-hero">
+            <div class="page-hero-glow"></div>
+            <div class="container page-hero-inner">
+                <p class="eyebrow" data-pt="Reserve sua jornada" data-en="Book your journey">Reserve sua jornada</p>
+                <h1 class="big-display" data-pt="INGRESSOS" data-en="TICKETS">INGRESSOS</h1>
+                <p class="page-hero-sub" data-pt="Três caminhos. Uma experiência inesquecível."
+                    data-en="Three paths. One unforgettable experience.">
+                    Três caminhos. Uma experiência inesquecível.
+                </p>
+                <div class="gold-divider"></div>
+            </div>
+        </section>
+
+        <section class="tickets-section">
+            <div class="container tickets-luxe">
+                <div class="ticket-card-luxe">
+                    <div class="ticket-top">
+                        <img src="img/meia.png" alt="Ingresso Meia" class="icone-ingresso">
+                    </div>
+                    <div class="ticket-body">
+                        <h3 data-pt="Meia" data-en="Full Ticket">Meia</h3>
+                        <div class="ticket-price">U$ 35</div>
+                        <p data-pt="Acesso completo às galerias principais do Legado Mundial."
+                            data-en="Full access to the main World Legacy galleries.">
+                            Acesso completo às galerias principais do Legado Mundial.
+                        </p>
+                        <button onclick="abrirPagamento('Meia', 35)" data-pt="Comprar"
+                            data-en="Buy Now">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="ticket-card-luxe featured-ticket">
+                    <div class="ticket-badge" data-pt="Mais escolhido" data-en="Most chosen">Mais escolhido</div>
+                    <div class="ticket-top">
+                        <img src="img/inteira.png" alt="Ingresso Inteira" class="icone-ingresso">
+                    </div>
+                    <div class="ticket-body">
+                        <h3 data-pt="Inteira" data-en="Half Ticket">Inteira</h3>
+                        <div class="ticket-price">U$ 70</div>
+                        <p data-pt="Opção especial para estudantes, idosos e visitantes com direito ao benefício."
+                            data-en="Special option for students, seniors and eligible visitors.">
+                            Opção especial para estudantes, idosos e visitantes com direito ao benefício.
+                        </p>
+                        <button onclick="abrirPagamento('Inteira', 70)" data-pt="Comprar"
+                            data-en="Buy Now">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="ticket-card-luxe">
+                    <div class="ticket-top">
+                        <img src="img/vip.png" alt="Ingresso VIP" class="icone-ingresso">
+                    </div>
+                    <div class="ticket-body">
+                        <h3 data-pt="VIP" data-en="VIP">VIP</h3>
+                        <div class="ticket-price">U$ 120</div>
+                        <p data-pt="Experiência premium com acesso completo, prioridade e atendimento especial."
+                            data-en="Premium experience with full access, priority entry and special service.">
+                            Experiência premium com acesso completo, prioridade e atendimento especial.
+                        </p>
+                        <button onclick="abrirPagamento('VIP', 120)" data-pt="Comprar"
+                            data-en="Buy Now">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2 data-pt="Resumo da Compra" data-en="Purchase Summary">Resumo da Compra</h2>
+            <p><span data-pt="Produto:" data-en="Product:">Produto:</span> <span id="produto"></span></p>
+            <p><span data-pt="Preço:" data-en="Price:">Preço:</span> U$ <span id="preco"></span></p>
+            <p><span data-pt="Quantidade:" data-en="Quantity:">Quantidade:</span> <input type="number" id="quantidade"
+                    value="1" min="1"></p>
+            <p><strong><span data-pt="Total:" data-en="Total:">Total:</span> U$ <span id="total"></span></strong></p>
+
+            <h3 data-pt="Dados do Cliente" data-en="Customer Details">Dados do Cliente</h3>
+            <input type="text" id="nome" placeholder="Nome Completo" data-pt="Nome Completo" data-en="Full Name">
+            <input type="email" id="email" placeholder="Seu E-mail" data-pt="Seu E-mail" data-en="Your E-mail">
+            <input type="text" id="pais" placeholder="País" data-pt="País" data-en="Country">
+
+            <h3 data-pt="Continente" data-en="Continent">Continente</h3>
+            <select id="continente">
+                <option value="" data-pt="Escolher" data-en="Choose">Escolher</option>
+                <option value="america" data-pt="América" data-en="America">América</option>
+                <option value="europa" data-pt="Europa" data-en="Europe">Europa</option>
+                <option value="asia" data-pt="Ásia" data-en="Asia">Ásia</option>
+                <option value="africa" data-pt="África" data-en="Africa">África</option>
+            </select>
+
+            <h3 data-pt="Pagamento" data-en="Payment">Pagamento</h3>
+            <select id="pagamento"></select>
+
+            <button onclick="finalizarCompra()" class="btn-finalizar" data-pt="Finalizar Compra"
+                data-en="Complete Purchase">Finalizar Compra</button>
+            <button onclick="fecharModal()" class="btn-cancelar" data-pt="Cancelar" data-en="Cancel">Cancelar</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <!-- Coluna 1 -->
+            <div class="footer-section">
+                <h4 data-pt="Museu da Copa" data-en="World Cup Museum">Museu da Copa</h4>
+                <p data-pt="© 2026 Todos os direitos reservados." data-en="© 2026 All rights reserved.">
+                    © 2026 Todos os direitos reservados.
+                </p>
+                <p data-pt="1 MetLife Stadium Dr 
+                East Rutherford
+                 NJ 07073 - United States
+                " data-en="1 MetLife Stadium Dr
+                 East Rutherford
+                 NJ 07073 - United States
+                ">
+                1 MetLife Stadium Dr <br> East Rutherford <BR> NJ 07073 - United States
+                </p>
+            </div>
+
+            <!-- Coluna 2 -->
+            <div class="footer-section">
+                <h4 data-pt="Contato" data-en="Contact">Contato</h4>
+                <p>(11) 99999-9999</p>
+                <p>museulegadomundial@gmail.com</p>
+                <p data-pt="Terça a Domingo: 10h às 18h" data-en="Tuesday to Sunday: 10 AM - 6 PM">
+                    Terça a Domingo: 10h às 18h
+                </p>
+            </div>
+
+            <!-- Coluna 3 -->
+            <div class="footer-section">
+                <h4 data-pt="Links" data-en="Links">Links</h4>
+                <a href="/rodape/politica.html" data-pt="Política de Privacidade" data-en="Privacy Policy">
+                    Política de Privacidade
+                </a>
+                <a href="/rodape/acessibilidade.html" data-pt="Acessibilidade" data-en="Accessibility">
+                    Acessibilidade
+                </a>
+                <a href="/rodape/termos.html" data-pt="Termos de Uso" data-en="Terms of Use">
+                    Termos de Uso
+                </a>
+            </div>
+
+            <!-- Coluna 4 -->
+            <div class="footer-section">
+                <h4 data-pt="Redes" data-en="Social Media">Redes</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom">
+            <p data-pt="© Desenvolvido por legado mundial"
+                data-en="© Developed by legado mundial">
+                © Desenvolvido por legado mundial
+            </p>
+        </div>
+    </footer>
+
+    <script src="pagamento.js"></script>
+
+    <button onclick="ativarLeitor()" id="btnLeitor">
+        <div class="btn-inner" id="iconeContainer">
+            <!-- Ícone de Som (SVG) -->
+            <svg id="svgSom" viewBox="0 0 24 24">
+                <path
+                    d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16.03C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+            </svg>
+        </div>
+    </button>
+
+    <script>
+        let leitorAtivo = false;
+        let ultimoTexto = "";
+        let timeout;
+
+        // Ativar / desativar
+        function ativarLeitor() {
+            leitorAtivo = !leitorAtivo;
+            const container = document.getElementById("iconeContainer");
+
+            // Ícones em formato SVG
+            const iconSom = '<svg viewBox="0 0 24 24"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16.03C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg>';
+            const iconMudo = '<svg viewBox="0 0 24 24"><path d="M12,4L9.91,6.09L12,8.18V4M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04 14.83,18.46 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L4.27,3M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.48,12.43 16.5,12.22 16.5,12Z" /></svg>';
+
+            // Troca o visual
+            container.innerHTML = leitorAtivo ? iconMudo : iconSom;
+
+            // Faz ele falar o estado atual
+            const aviso = leitorAtivo ? "Leitor ativado" : "Leitor desativado";
+
+            // Força a fala do aviso ignorando a trava de "texto repetido"
+            ultimoTexto = "";
+            falar(aviso)
+        }
+        // Função de fala
+        function falar(texto) {
+            if (!texto || texto === ultimoTexto) return;
+
+            ultimoTexto = texto;
+
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                const fala = new SpeechSynthesisUtterance(texto);
+                fala.lang = "pt-BR";
+                speechSynthesis.cancel();
+                speechSynthesis.speak(fala);
+            }, 300); // pequeno atraso pra evitar spam
+        }
+        // Pegar texto inteligente
+        function pegarTexto(el) {
+            if (!el) return "";
+
+            return (
+                el.getAttribute("aria-label") ||
+                el.alt ||
+                el.placeholder ||
+                el.title ||
+                el.innerText
+            );
+        }
+        // Mouse mais preciso
+        document.addEventListener("mousemove", function (e) {
+            if (!leitorAtivo) return;
+
+            const elemento = document.elementFromPoint(e.clientX, e.clientY);
+
+            if (!elemento) return;
+
+            // Só elementos importantes
+            if (elemento.matches("button, a, p, h1, h2, h3, span, img, input, label")) {
+                const texto = pegarTexto(elemento);
+                falar(texto);
+            }
+        });
+        // Toque no celular
+        document.addEventListener("touchstart", function (e) {
+            if (!leitorAtivo) return;
+
+            const elemento = e.target;
+
+            if (elemento.matches("button, a, p, h1, h2, h3, span, img, input, label")) {
+                const texto = pegarTexto(elemento);
+                falar(texto);
+            }
+        });
+    </script>
+
+    <!-- SCRIPT TRADUÇÃO -->
+    <script>
+        let currentLang = "pt";
+
+        function toggleLanguage() {
+            const texto = document.getElementById("lang-text");
+
+            currentLang = currentLang === "pt" ? "en" : "pt";
+
+            document.querySelectorAll("[data-pt]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+
+            // 🔥 muda só o texto, NÃO o botão inteiro
+            texto.innerText = currentLang.toUpperCase();
+        }
+    </script>
+    <!-- Cole o código aqui -->
+    <button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
+
+        <!-- Ícone (fica fixo) -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 8l6 6" />
+            <path d="M4 14l6-6 2-3" />
+            <path d="M2 5h12" />
+            <path d="M22 22l-5-10-5 10" />
+        </svg>
+
+        <!-- Texto (vai mudar) -->
+        <span id="lang-text">PT</span>
+
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

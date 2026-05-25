@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade | Museu da Copa</title>
+
+<link rel="stylesheet" href="/global.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/rodape/acessibilidade.css">
+
+</head>
+
+<body>
+
+<!-- BOTÃO VOLTAR -->
+
+<button onclick="voltarPagina()" class="btn-voltar">← Voltar</button>
+
+<!-- VLibras -->
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
+  
+  <!-- Ícone (fica fixo) -->
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+       stroke="currentColor" stroke-width="2">
+    <path d="M5 8l6 6"/>
+    <path d="M4 14l6-6 2-3"/>
+    <path d="M2 5h12"/>
+    <path d="M22 22l-5-10-5 10"/>
+  </svg>
+
+  <!-- Texto (vai mudar) -->
+  <span id="lang-text">PT</span>
+
+</button>
+
+<button onclick="ativarLeitor()" id="btnLeitor">
+    <div class="btn-inner" id="iconeContainer">
+        <!-- Ícone de Som (SVG) -->
+        <svg id="svgSom" viewBox="0 0 24 24"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16.03C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg>
+    </div>
+</button>
+
+<div class="container-custom">
+
+```
+<h1 data-pt="Acessibilidade" data-en="Accessibility"></h1>
+
+<p data-pt="O Museu da Copa tem o compromisso de tornar seu site acessível para todas as pessoas."
+   data-en="The Museum is committed to making this website accessible to all users."></p>
+
+<h2 data-pt="Recursos de Acessibilidade" data-en="Accessibility Features"></h2>
+
+<ul>
+    <li data-pt="Leitor de tela ativado pelo botão 🔊"
+        data-en="Screen reader activated by 🔊 button"></li>
+
+    <li data-pt="Tradução de idioma (Português / Inglês)"
+        data-en="Language translation (Portuguese / English)"></li>
+
+    <li data-pt="Integração com VLibras (Libras)"
+        data-en="VLibras integration (sign language)"></li>
+
+    <li data-pt="Design responsivo para todos os dispositivos"
+        data-en="Responsive design for all devices"></li>
+
+    <li data-pt="Uso de textos com bom contraste"
+        data-en="Use of high-contrast text"></li>
+</ul>
+
+<h2 data-pt="Boas Práticas" data-en="Best Practices"></h2>
+
+<p data-pt="Seguimos boas práticas como uso de estrutura semântica, textos alternativos e navegação simples."
+   data-en="We follow best practices such as semantic structure, alternative text and simple navigation."></p>
+
+<h2 data-pt="Limitações" data-en="Limitations"></h2>
+
+<p data-pt="Alguns conteúdos podem não estar totalmente acessíveis, mas estamos em constante melhoria."
+   data-en="Some content may not be fully accessible, but we are continuously improving."></p>
+
+<h2 data-pt="Contato" data-en="Contact"></h2>
+
+<p data-pt="Caso encontre dificuldades, entre em contato:"
+   data-en="If you encounter difficulties, contact us:"></p>
+
+<p>contato@museudacopa.com</p>
+```
+
+</div>
+
+<!-- SCRIPTS -->
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+<script>
+        let leitorAtivo = false;
+        let ultimoTexto = "";
+        let timeout;
+
+        // Ativar / desativar
+        function ativarLeitor() {
+            leitorAtivo = !leitorAtivo;
+            const container = document.getElementById("iconeContainer");
+
+            // Ícones em formato SVG
+            const iconSom = '<svg viewBox="0 0 24 24"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16.03C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg>';
+            const iconMudo = '<svg viewBox="0 0 24 24"><path d="M12,4L9.91,6.09L12,8.18V4M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04 14.83,18.46 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L4.27,3M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.48,12.43 16.5,12.22 16.5,12Z" /></svg>';
+
+            // Troca o visual
+            container.innerHTML = leitorAtivo ? iconMudo : iconSom;
+
+            // Faz ele falar o estado atual
+            const aviso = leitorAtivo ? "Leitor ativado" : "Leitor desativado";
+            
+            // Força a fala do aviso ignorando a trava de "texto repetido"
+            ultimoTexto = ""; 
+            falar(aviso)
+        }
+        // Função de fala
+        function falar(texto) {
+            if (!texto || texto === ultimoTexto) return;
+
+            ultimoTexto = texto;
+
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                const fala = new SpeechSynthesisUtterance(texto);
+                fala.lang = "pt-BR";
+                speechSynthesis.cancel();
+                speechSynthesis.speak(fala);
+            }, 300); // pequeno atraso pra evitar spam
+        }
+        // Pegar texto inteligente
+        function pegarTexto(el) {
+            if (!el) return "";
+
+            return (
+                el.getAttribute("aria-label") ||
+                el.alt ||
+                el.placeholder ||
+                el.title ||
+                el.innerText
+            );
+        }
+        // Mouse mais preciso
+        document.addEventListener("mousemove", function (e) {
+            if (!leitorAtivo) return;
+
+            const elemento = document.elementFromPoint(e.clientX, e.clientY);
+
+            if (!elemento) return;
+
+            // Só elementos importantes
+            if (elemento.matches("button, a, p, h1, h2, h3, span, img, input, label")) {
+                const texto = pegarTexto(elemento);
+                falar(texto);
+            }
+        });
+        // Toque no celular
+        document.addEventListener("touchstart", function (e) {
+            if (!leitorAtivo) return;
+
+            const elemento = e.target;
+
+            if (elemento.matches("button, a, p, h1, h2, h3, span, img, input, label")) {
+                const texto = pegarTexto(elemento);
+                falar(texto);
+            }
+        });
+    </script>
+
+ <script>
+let currentLang = "pt";
+
+function toggleLanguage() {
+    currentLang = currentLang === "pt" ? "en" : "pt";
+    atualizarTextos();
+}
+
+function atualizarTextos() {
+    const textoBotao = document.getElementById("lang-text");
+    
+    document.querySelectorAll("[data-pt]").forEach(el => {
+        el.innerText = el.getAttribute("data-" + currentLang);
+    });
+
+    if(textoBotao) textoBotao.innerText = currentLang.toUpperCase();
+}
+
+// 🔥 ISSO FAZ O TEXTO APARECER AO CARREGAR A PÁGINA
+document.addEventListener("DOMContentLoaded", atualizarTextos);
+
+    </script>
+
+<script>
+function voltarPagina() {
+    if (document.referrer) {
+        window.history.back();
+    } else {
+        window.location.href = "/home/index.html";
+    }
+}
+</script>
+
+</body>
+</html>

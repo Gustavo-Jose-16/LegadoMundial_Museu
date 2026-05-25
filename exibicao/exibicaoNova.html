@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-pt="Museu Mundial | Galeria Interativa" data-en="World Museum | Interactive Gallery">
+        Museu Mundial | Galeria Interativa
+    </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./exibicaoNova.css">
+    <link rel="stylesheet" href="/global.css">
+</head>
+
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar-1">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+
+            <!-- LOGO -->
+            <div class="logo" data-pt="Legado Mundial" data-en="World Legacy">Legado Mundial</div>
+
+            <!-- BOTÃO MOBILE -->
+            <button class="menu-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#menu">
+                ☰
+            </button>
+
+            <!-- MENU -->
+            <ul id="menu" class="menu collapse d-lg-flex">
+                <li><a href="/home/index.html" data-pt="Início" data-en="Home">Início</a></li>
+                <li><a href="/museu/museu.html" data-pt="Museu" data-en="Museum">Museu</a></li>
+                <li><a href="/eventos/eventos.html" data-pt="Eventos" data-en="Events">Eventos</a></li>
+                <li><a href="/exibicao/exibicaoNova.html" data-pt="Exibição" data-en="Exhibition">Exibição</a></li>
+                <li>
+                    <a href="/ingresso/ingresso.html">
+                        <button class="btn btn-red" data-pt="Ingressos" data-en="Tickets">Ingressos</button>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-glow"></div>
+        <div class="container page-hero-inner">
+            <p class="eyebrow" data-pt="Imersão Cultural & Esportiva" data-en="Cultural & Sports Immersion">Imersão
+                Cultural & Esportiva</p>
+            <h1 class="big-display">
+                <span data-pt="GALERIA DAS" data-en="GALLERY OF">GALERIA DAS</span>
+                <span class="text-gradient-gold" data-pt="Nações" data-en="Nations">Nações</span>
+            </h1>
+            <p class="page-hero-sub"
+                data-pt="Cada bandeira, uma história. Cada nação, um capítulo na construção do maior espetáculo do planeta."
+                data-en="Each flag, a story. Each nation, a chapter in building the planet's greatest spectacle.">Cada
+                bandeira, uma história. Cada nação, um capítulo na construção do maior espetáculo do planeta.</p>
+            <div class="gold-divider"></div>
+        </div>
+    </section>
+
+    <!-- Cards de Países -->
+    <section class="exibicao-grid-section">
+        <div class="container exibicao-grid">
+            <a href="#brasil" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="0">
+                <div class="country-img">
+                    <img src="img/brasil.webp" alt="Brasil" loading="lazy">
+                    <div class="country-grad"></div>
+                    <span class="country-badge">5×</span>
+                    <div class="country-text">
+                        <h3 data-pt="Brasil" data-en="Brazil">Brasil</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#mexico" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="240">
+                <div class="country-img">
+                    <img src="img/mexico.png" alt="México" loading="lazy">
+                    <div class="country-grad"></div>
+
+                    <div class="country-text">
+                        <h3 data-pt="México" data-en="Mexico">México</h3>
+                       
+                    </div>
+                </div>
+            </a>
+
+            <a href="#eua" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="80">
+                <div class="country-img">
+                    <img src="img/eua.png" alt="Estados Unidos" loading="lazy">
+                    <div class="country-grad"></div>
+
+                    <div class="country-text">
+                        <h3 data-pt="Estados Unidos" data-en="United States">Estados Unidos</h3>
+                    
+                    </div>
+                </div>
+            </a>
+
+            <a href="#canada" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="160">
+                <div class="country-img">
+                    <img src="img/canada.png" alt="Canadá" loading="lazy">
+                    <div class="country-grad"></div>
+
+                    <div class="country-text">
+                        <h3 data-pt="Canadá" data-en="Canada">Canadá</h3>
+                       
+                    </div>
+                </div>
+            </a>
+
+            <a href="#argentina" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="0">
+                <div class="country-img">
+                    <img src="img/argentina.png" alt="Argentina" loading="lazy">
+                    <div class="country-grad"></div>
+                    <span class="country-badge">3×</span>
+                    <div class="country-text">
+                        <h3 data-pt="Argentina" data-en="Argentina">Argentina</h3>
+                      
+                    </div>
+                </div>
+            </a>
+            <a href="#franca" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="80">
+                <div class="country-img">
+                    <img src="img/franca.png" alt="França" loading="lazy">
+                    <div class="country-grad"></div>
+                    <span class="country-badge">2×</span>
+                    <div class="country-text">
+                        <h3 data-pt="França" data-en="France">França</h3>
+                       
+                    </div>
+                </div>
+            </a>
+            <a href="#espanha" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="160">
+                <div class="country-img">
+                    <img src="img/espanha.png" alt="Espanha" loading="lazy">
+                    <div class="country-grad"></div>
+                    <span class="country-badge">1×</span>
+                    <div class="country-text">
+                        <h3 data-pt="Espanha" data-en="Spain">Espanha</h3>
+                      
+                    </div>
+                </div>
+            </a>
+            <a href="#inglaterra" class="country-card reveal" style="text-decoration:none; color:inherit"
+                data-delay="240">
+                <div class="country-img">
+                    <img src="img/inglaterra (1).png" alt="Inglaterra" loading="lazy">
+                    <div class="country-grad"></div>
+                    <span class="country-badge">1×</span>
+                    <div class="country-text">
+                        <h3 data-pt="Inglaterra" data-en="England">Inglaterra</h3>
+                       
+                    </div>
+                </div>
+            </a>
+            <a href="#alemanha" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="0">
+                <div class="country-img">
+                    <img src="img/alemanha1 (1).png" alt="Alemanha" loading="lazy">
+                    <div class="country-grad"></div>
+                    <span class="country-badge">4×</span>
+                    <div class="country-text">
+                        <h3 data-pt="Alemanha" data-en="Germany">Alemanha</h3>
+                        
+                    </div>
+                </div>
+            </a>
+            <a href="#uruguai" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="80">
+                <div class="country-img">
+                    <img src="img/uruguai (1).png" alt="Uruguai" loading="lazy">
+                    <div class="country-grad"></div>
+                    <span class="country-badge">2×</span>
+                    <div class="country-text">
+                        <h3 data-pt="Uruguai" data-en="Uruguay">Uruguai</h3>
+                      
+                    </div>
+                </div>
+            </a>
+            <a href="#italia" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="160">
+                <div class="country-img">
+                    <img src="img/italia.png" alt="Italia" loading="lazy">
+                    <div class="country-grad"></div>
+                    <span class="country-badge">4×</span>
+                    <div class="country-text">
+                        <h3 data-pt="Itália" data-en="Italy">Itália</h3>
+                        
+                    </div>
+                </div>
+            </a>
+            <a href="#marrocos" class="country-card reveal" style="text-decoration:none; color:inherit"
+                data-delay="240">
+                <div class="country-img">
+                    <img src="img/marrocos.png" alt="Marrocos" loading="lazy">
+                    <div class="country-grad"></div>
+
+                    <div class="country-text">
+                        <h3 data-pt="Marrocos" data-en="Marocco">Marrocos</h3>
+                       
+                    </div>
+                </div>
+            </a>
+            <a href="#curacao" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="0">
+                <div class="country-img">
+                    <img src="img/curaçao.png" alt="Curaçao" loading="lazy">
+                    <div class="country-grad"></div>
+
+                    <div class="country-text">
+                        <h3 data-pt="Curaçao" data-en="Curacao">Curaçao</h3>
+                        
+                    </div>
+                </div>
+            </a>
+            <a href="#portugal" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="80">
+                <div class="country-img">
+                    <img src="img/portugal.png" alt="Portugal" loading="lazy">
+                    <div class="country-grad"></div>
+                    <div class="country-text">
+                        <h3 data-pt="Portugal" data-en="Portugal">Portugal</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="#japao" class="country-card reveal" style="text-decoration:none; color:inherit" data-delay="160">
+                <div class="country-img">
+                    <img src="img/japao.png" alt="Japao" loading="lazy">
+                    <div class="country-grad"></div>
+
+                    <div class="country-text">
+                        <h3 data-pt="Japão" data-en="Japan">Japão</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Detalhes das Nações -->
+    <section class="detalhes-museu">
+        <div class="container detalhes-container">
+
+            <div class="detalhe-bloco" id="brasil">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Brasil" data-en="Brazil">Brasil</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="O Brasil é a seleção mais vitoriosa da história da Copa do Mundo, conhecido mundialmente pelo futebol ofensivo, criativo e por revelar grandes jogadores como Pelé, Ronaldo, Ronaldinho e Neymar. Além do futebol, o país possui uma cultura extremamente diversa, resultado da mistura de influências indígenas, africanas e europeias. O Brasil é famoso pelo Carnaval, pelo samba, pela música popular, pelas praias e pela culinária variada, além da forte paixão nacional pelo esporte.
+" data-en="Brazil is the most successful team in World Cup history, known worldwide for its attacking, creative football and for producing great players like Pelé, Ronaldo, Ronaldinho, and Neymar. Beyond football, the country boasts an extremely diverse culture, a result of the blending of indigenous, African, and European influences. Brazil is famous for its Carnival, samba, popular music, beaches, and varied cuisine, as well as its strong national passion for sports.">
+                        O Brasil é a seleção mais vitoriosa da história da Copa do Mundo, conhecido mundialmente pelo
+                        futebol ofensivo, criativo e por revelar grandes jogadores como Pelé, Ronaldo, Ronaldinho e
+                        Neymar. Além do futebol, o país possui uma cultura extremamente diversa, resultado da mistura de
+                        influências indígenas, africanas e europeias. O Brasil é famoso pelo Carnaval, pelo samba, pela
+                        música popular, pelas praias e pela culinária variada, além da forte paixão nacional pelo
+                        esporte.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="img/brasil2.jpg" alt="Brasil 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="img/brasil.jpg" alt="Brasil 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="img/brasil3.jpg" alt="Brasil 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco reverse" id="eua">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Estados Unidos" data-en="United States">Estados Unidos</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="Os Estados Unidos possuem uma das seleções que mais cresceram na história recente da Copa do Mundo, sendo conhecidos pela evolução do futebol no país e pela forte estrutura esportiva. O país sediou a Copa de 1994 e será um dos anfitriões novamente em 2026. Além do futebol, os Estados Unidos possuem uma cultura extremamente diversa, influenciada por povos do mundo inteiro. O país é famoso por sua música, cinema de Hollywood, tecnologia e esportes como basquete e futebol americano, além de cidades icônicas como Nova York, Los Angeles e Miami.
+" data-en="The United States boasts one of the fastest-growing national teams in recent World Cup history, known for the evolution of soccer in the country and its strong sporting infrastructure. The country hosted the 1994 World Cup and will be one of the hosts again in 2026. Beyond soccer, the United States possesses an extremely diverse culture, influenced by people from all over the world. The country is famous for its music, Hollywood cinema, technology, and sports such as basketball and American football, as well as iconic cities like New York, Los Angeles, and Miami.">
+                        Os Estados Unidos possuem uma das seleções que mais cresceram na história recente da Copa do
+                        Mundo, sendo conhecidos pela evolução do futebol no país e pela forte estrutura esportiva. O
+                        país sediou a Copa de 1994 e será um dos anfitriões novamente em 2026. Além do futebol, os
+                        Estados Unidos possuem uma cultura extremamente diversa, influenciada por povos do mundo
+                        inteiro. O país é famoso por sua música, cinema de Hollywood, tecnologia e esportes como
+                        basquete e futebol americano, além de cidades icônicas como Nova York, Los Angeles e Miami.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/estados unids 03.jpg" alt="Trofeu 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/estados unidos 02.jpg" alt="Trofeu 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/estados unidos 01.jpg" alt="Trofeu 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco" id="canada">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Canadá" data-en="Canada">Canadá</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="O Canadá possui uma história recente na Copa do Mundo, participando pela primeira vez em 1986 e retornando em 2022, quando marcou seu primeiro gol na competição. O país será um dos anfitriões da Copa do Mundo de 2026 ao lado dos Estados Unidos e México, recebendo partidas em cidades como Toronto e Vancouver. Além do futebol, o Canadá é conhecido por sua cultura multicultural, influenciada por povos indígenas, franceses e britânicos. O país se destaca por suas paisagens naturais, pelo hóquei no gelo, pela culinária com poutine e maple syrup, além de valorizar diversidade, inclusão e qualidade de vida.
+.
+" data-en="Canada has a recent history in the World Cup, participating for the first time in 1986 and returning in 2022, when it scored its first goal in the competition. The country will be one of the hosts of the 2026 World Cup alongside the United States and Mexico, hosting matches in cities such as Toronto and Vancouver. Beyond soccer, Canada is known for its multicultural culture, influenced by Indigenous, French, and British peoples. The country stands out for its natural landscapes, ice hockey, cuisine featuring poutine and maple syrup, and its emphasis on diversity, inclusion, and quality of life.">
+                        O Canadá possui uma história recente na Copa do Mundo, participando pela primeira vez em 1986 e
+                        retornando em 2022, quando marcou seu primeiro gol na competição. O país será um dos anfitriões
+                        da Copa do Mundo de 2026 ao lado dos Estados Unidos e México, recebendo partidas em cidades como
+                        Toronto e Vancouver. Além do futebol, o Canadá é conhecido por sua cultura multicultural,
+                        influenciada por povos indígenas, franceses e britânicos. O país se destaca por suas paisagens
+                        naturais, pelo hóquei no gelo, pela culinária com poutine e maple syrup, além de valorizar
+                        diversidade, inclusão e qualidade de vida.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/canada 01.jpg" alt="Camisa 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/canada 02.jpg" alt="Camisa 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/canada 03.jpg" alt="Camisa 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco reverse" id="mexico">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="México" data-en="Mexico">México</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="O México é um país de cultura rica e apaixonado por futebol, conhecido por suas tradições, músicas típicas como o mariachi e uma culinária famosa mundialmente, com pratos como tacos e burritos. A cultura mexicana mistura influências indígenas e espanholas, criando festas tradicionais marcantes como o Día de los Muertos. Na Copa do Mundo, a seleção mexicana é uma das mais tradicionais, reconhecida pela força de sua torcida e por participações históricas no torneio."
+                        data-en="Mexico is a country with a rich culture and a passion for football, known for its traditions, typical music like mariachi, and world-famous cuisine with dishes such as tacos and burritos. Mexican culture blends indigenous and Spanish influences, creating striking traditional celebrations like Día de los Muertos (Day of the Dead). In the World Cup, the Mexican national team is one of the most traditional, recognized for the strength of its fan base and its historic participation in the tournament.">
+                        O México é um país de cultura rica e apaixonado por futebol, conhecido por suas tradições,
+                        músicas típicas como o mariachi e uma culinária famosa mundialmente, com pratos como tacos e
+                        burritos. A cultura mexicana mistura influências indígenas e espanholas, criando festas
+                        tradicionais marcantes como o Día de los Muertos. Na Copa do Mundo, a seleção mexicana é uma das
+                        mais tradicionais, reconhecida pela força de sua torcida e por participações históricas no
+                        torneio.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/mexico 01.jpg" alt="Lenda 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/mexico 02.jpg" alt="Lenda 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/mexico 03.jpg" alt="Lenda 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco" id="argentina">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Argentina" data-en="Argentina">Argentina</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="A Argentina é uma das seleções mais tradicionais da história da Copa do Mundo, conhecida por seu futebol técnico, criativo e por grandes ídolos como Diego Maradona e Lionel Messi. Além do futebol, o país possui uma cultura rica influenciada principalmente pela imigração europeia, especialmente italiana e espanhola. A Argentina é famosa pelo tango, dança tradicional surgida em Buenos Aires, pela culinária com destaque para o asado, empanadas e o mate, além de sua forte tradição em literatura, teatro e música.
+." data-en="Argentina is one of the most traditional teams in World Cup history, known for its technical and creative football and for idols like Diego Maradona and Lionel Messi. Beyond football, the country boasts a rich culture influenced primarily by European immigration, especially Italian and Spanish. Argentina is famous for tango, a traditional dance originating in Buenos Aires, its cuisine, particularly asado, empanadas, and mate, as well as its strong tradition in literature, theater, and music.">
+                        A Argentina é uma das seleções mais tradicionais da história da Copa do Mundo, conhecida por seu
+                        futebol técnico, criativo e por grandes ídolos como Diego Maradona e Lionel Messi. Além do
+                        futebol, o país possui uma cultura rica influenciada principalmente pela imigração europeia,
+                        especialmente italiana e espanhola. A Argentina é famosa pelo tango, dança tradicional surgida
+                        em Buenos Aires, pela culinária com destaque para o asado, empanadas e o mate, além de sua forte
+                        tradição em literatura, teatro e música.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/argentina 01.jpg" alt="Foto 1" loading="lazy"></div>
+                    <div class="foto-item"><img src="/exibicao/img/argentina 02.jpg" alt="Foto 2" loading="lazy"></div>
+                    <div class="foto-item"><img src="/exibicao/img/argentina 03.jpg" alt="Foto 3" loading="lazy"></div>
+                </div>
+            </div>
+            <div class="detalhe-bloco reverse" id="franca">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="França" data-en="France">França</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="A França é uma das seleções mais importantes da história da Copa do Mundo, conhecida por seu futebol técnico, rápido e por revelar grandes jogadores como Zinedine Zidane, Thierry Henry, Kylian Mbappé e Antoine Griezmann. O país conquistou dois títulos mundiais, em 1998 e 2018. Além do futebol, a França possui uma cultura extremamente influente, famosa por sua arte, moda, gastronomia e monumentos históricos como a Torre Eiffel. A culinária francesa, os museus e a forte tradição cultural fazem do país um dos centros culturais mais importantes do mundo.
+" data-en="France is one of the most important national teams in World Cup history, known for its technical, fast-paced football and for producing great players such as Zinedine Zidane, Thierry Henry, Kylian Mbappé, and Antoine Griezmann. The country has won two World Cup titles, in 1998 and 2018. Beyond football, France possesses an extremely influential culture, famous for its art, fashion, gastronomy, and historical monuments like the Eiffel Tower. French cuisine, museums, and strong cultural traditions make the country one of the most important cultural centers in the world.">
+                        A França é uma das seleções mais importantes da história da Copa do Mundo, conhecida por seu
+                        futebol técnico, rápido e por revelar grandes jogadores como Zinedine Zidane, Thierry Henry,
+                        Kylian Mbappé e Antoine Griezmann. O país conquistou dois títulos mundiais, em 1998 e 2018. Além
+                        do futebol, a França possui uma cultura extremamente influente, famosa por sua arte, moda,
+                        gastronomia e monumentos históricos como a Torre Eiffel. A culinária francesa, os museus e a
+                        forte tradição cultural fazem do país um dos centros culturais mais importantes do mundo.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/frança 01.jpg" alt="Livro 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/frança 02.jpg" alt="Livro 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/fraça 03.jpg" alt="Livro 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco" id="espanha">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Espanha" data-en="Spain">Espanha</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="A Espanha é uma seleção tradicional do futebol mundial, conhecida pelo estilo de jogo baseado em posse de bola e passes rápidos, chamado “tiki-taka”. O país conquistou sua primeira Copa do Mundo em 2010, liderado por jogadores como Andrés Iniesta, Xavi e Iker Casillas. Além do futebol, a Espanha possui uma cultura rica e diversa, marcada pelo flamenco, festas tradicionais como La Tomatina, culinária famosa com paella e tapas, além de grandes artistas como Pablo Picasso e Salvador Dalí.
+" data-en="Spain is a traditional powerhouse of world football, known for its possession-based, quick-passing style of play called
+                        'tiki-taka'. The country won its first World Cup in 2010, led by players such as Andrés Iniesta,
+                        Xavi, and Iker Casillas. Beyond football, Spain boasts a rich and diverse culture, marked by
+                        flamenco, traditional festivals like La Tomatina, famous cuisine including paella and tapas, and
+                        great artists such as Pablo Picasso and Salvador Dalí.">
+                        A Espanha é uma seleção tradicional do futebol mundial, conhecida pelo estilo de jogo baseado em
+                        posse de bola e passes rápidos, chamado “tiki-taka”. O país conquistou sua primeira Copa do
+                        Mundo em 2010, liderado por jogadores como Andrés Iniesta, Xavi e Iker Casillas. Além do
+                        futebol, a Espanha possui uma cultura rica e diversa, marcada pelo flamenco, festas tradicionais
+                        como La Tomatina, culinária famosa com paella e tapas, além de grandes artistas como Pablo
+                        Picasso e Salvador Dalí.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/espanha 01.jpg" alt="Livro 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/espanha 02.jpg" alt="Livro 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/espanha 03.jpg" alt="Livro 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco reverse" id="inglaterra">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Inglaterra" data-en="England">Inglaterra</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="A Inglaterra é uma das seleções mais tradicionais da história da Copa do Mundo, conhecida por ter criado o futebol moderno e por conquistar o título mundial em 1966, jogando em casa. O país revelou grandes jogadores como Bobby Charlton, David Beckham, Wayne Rooney e Harry Kane. Além do futebol, a Inglaterra possui uma cultura rica e influente, famosa pela música, literatura e arquitetura histórica. O país é conhecido mundialmente por bandas como The Beatles e Queen, além de monumentos como o Big Ben e o Palácio de Buckingham.
+" data-en="England is one of the most traditional teams in World Cup history, known for having created modern football and for winning the world title in 1966, playing at home. The country
+has produced great players such as Bobby Charlton, David Beckham, Wayne Rooney and Harry Kane. In addition to
+football, England has a rich and influential culture, famous for its music, literature and historical architecture. The country is known worldwide for bands such as The Beatles and Queen, as well as
+monuments such as Big Ben and Buckingham Palace.">
+                        A Inglaterra é uma das seleções mais tradicionais da história da Copa do Mundo, conhecida por
+                        ter criado o futebol moderno e por conquistar o título mundial em 1966, jogando em casa. O país
+                        revelou grandes jogadores como Bobby Charlton, David Beckham, Wayne Rooney e Harry Kane. Além do
+                        futebol, a Inglaterra possui uma cultura rica e influente, famosa pela música, literatura e
+                        arquitetura histórica. O país é conhecido mundialmente por bandas como The Beatles e Queen, além
+                        de monumentos como o Big Ben e o Palácio de Buckingham.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/inglaterra 01.jpg" alt="Livro 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/inglaterra 02.jpg" alt="Livro 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/inglaterra 003.jpg" alt="Livro 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco" id="alemanha">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Alemanha" data-en="Germany">Alemanha</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="A Alemanha é uma das seleções mais importantes da história da Copa do Mundo, conhecida por sua disciplina, organização e grandes conquistas. Além do futebol, o país possui uma cultura rica, marcada por festas tradicionais como a Oktoberfest, pela música clássica de compositores famosos como Beethoven e Bach, além de uma culinária tradicional com salsichas, pretzels e cervejas. A Alemanha também se destaca por seus castelos históricos, arquitetura medieval e grandes contribuições para a filosofia, ciência e educação."
+                        data-en="Germany is one of the most important teams in World Cup history, known for its discipline, organization, and great achievements. Beyond football, the country boasts a rich culture, marked by traditional festivals like Oktoberfest, classical music from famous composers such as Beethoven and Bach, and traditional cuisine featuring sausages, pretzels, and beer. Germany also stands out for its historic castles, medieval architecture, and significant contributions to philosophy, science, and education.">
+                        A Alemanha é uma das seleções mais importantes da história da Copa do Mundo, conhecida por sua
+                        disciplina, organização e grandes conquistas. Além do futebol, o país possui uma cultura rica,
+                        marcada por festas tradicionais como a Oktoberfest, pela música clássica de compositores famosos
+                        como Beethoven e Bach, além de uma culinária tradicional com salsichas, pretzels e cervejas. A
+                        Alemanha também se destaca por seus castelos históricos, arquitetura medieval e grandes
+                        contribuições para a filosofia, ciência e educação.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/alemanha 01.jpg" alt="Livro 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/alemanha 02.jpg" alt="Livro 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/alemanha 03.jpg" alt="Livro 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco reverse" id="uruguai">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Uruguai" data-en="Uruguay">Uruguai</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="O Uruguai é uma das seleções mais históricas da Copa do Mundo, conhecido por sua tradição, competitividade e pelos títulos conquistados em 1930 e 1950, incluindo o famoso “Maracanazo” contra o Brasil. Além do futebol, o país possui uma cultura rica influenciada principalmente por espanhóis e italianos, com tradições marcadas pelo consumo de mate, pelo tango, candombe e pelo carnaval uruguaio. A gastronomia também é destaque, especialmente o asado, empanadas e o tradicional chivito.
+" data-en="Uruguay is one of the most historic teams in the World Cup, known for its tradition, competitiveness, and titles won in 1930 and 1950, including the famous 'Maracanazo' against Brazil. Beyond football, the country boasts a rich culture influenced mainly by Spanish and Italian traditions, marked by the consumption of mate, tango, candombe, and the Uruguayan carnival. Gastronomy is also a highlight, especially asado, empanadas, and the traditional chivito.">
+                        O Uruguai é uma das seleções mais históricas da Copa do Mundo, conhecido por sua tradição,
+                        competitividade e pelos títulos conquistados em 1930 e 1950, incluindo o famoso “Maracanazo”
+                        contra o Brasil. Além do futebol, o país possui uma cultura rica influenciada principalmente por
+                        espanhóis e italianos, com tradições marcadas pelo consumo de mate, pelo tango, candombe e pelo
+                        carnaval uruguaio. A gastronomia também é destaque, especialmente o asado, empanadas e o
+                        tradicional chivito.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/uruguai 01.jpg" alt="Livro 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/uruguai 02.jpg" alt="Livro 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/uruguai 03.jpg" alt="Livro 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco" id="italia">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Itália" data-en="Italy">Itália</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="A Itália é uma das seleções mais tradicionais da história da Copa do Mundo, conhecida por sua forte defesa, organização tática e grandes conquistas. Além do futebol, o país possui uma cultura extremamente influente, sendo o berço do Renascimento e de artistas como Leonardo da Vinci e Michelangelo. A Itália também é famosa por sua culinária mundialmente conhecida, com pratos como pizza, massas e lasanha, além de sua música clássica, ópera e cidades históricas como Roma, Veneza e Florença.
+" data-en="Italy is one of the most traditional teams in World Cup history, known for its strong defense, tactical organization, and great achievements. Beyond football, the country possesses an extremely influential culture, being the birthplace of the Renaissance and artists such as Leonardo da Vinci and Michelangelo. Italy is also famous for its world-renowned cuisine, with dishes like pizza, pasta, and lasagna, as well as its classical music, opera, and historic cities such as Rome, Venice, and Florence.">
+                        A Itália é uma das seleções mais tradicionais da história da Copa do Mundo, conhecida por sua
+                        forte defesa, organização tática e grandes conquistas. Além do futebol, o país possui uma
+                        cultura extremamente influente, sendo o berço do Renascimento e de artistas como Leonardo da
+                        Vinci e Michelangelo. A Itália também é famosa por sua culinária mundialmente conhecida, com
+                        pratos como pizza, massas e lasanha, além de sua música clássica, ópera e cidades históricas
+                        como Roma, Veneza e Florença.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/italia 01.jpg" alt="Livro 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/italia 02.jpg" alt="Livro 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/italia 03.jpg" alt="Livro 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco reverse" id="marrocos">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Marrocos" data-en="Morocco">Marrocos</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="Marrocos é uma das seleções mais importantes do futebol africano, conhecida por sua técnica, velocidade e paixão pelo esporte. O país fez história na Copa do Mundo de 2022 ao se tornar a primeira seleção africana a chegar às semifinais do torneio. Além do futebol, Marrocos possui uma cultura rica influenciada por tradições árabes, africanas e europeias. O país é famoso por seus mercados tradicionais, arquitetura islâmica, culinária com pratos como cuscuz e tajine, além de cidades históricas como Marrakech, Casablanca e Fez.
+" data-en="Morocco is one of the most important national teams in African football, known for its technique, speed, and passion for the sport. The country made history at the 2022 World Cup by becoming the first African team to reach the semi-finals of the tournament. Beyond football, Morocco boasts a rich culture influenced by Arab, African, and European traditions. The country is famous for its traditional markets, Islamic architecture, cuisine with dishes like couscous and tajine, as well as historic cities such as Marrakech, Casablanca, and Fez.">
+                        Marrocos é uma das seleções mais importantes do futebol africano, conhecida por sua técnica,
+                        velocidade e paixão pelo esporte. O país fez história na Copa do Mundo de 2022 ao se tornar a
+                        primeira seleção africana a chegar às semifinais do torneio. Além do futebol, Marrocos possui
+                        uma cultura rica influenciada por tradições árabes, africanas e europeias. O país é famoso por
+                        seus mercados tradicionais, arquitetura islâmica, culinária com pratos como cuscuz e tajine,
+                        além de cidades históricas como Marrakech, Casablanca e Fez.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/marrocos 01.jpg" alt="Livro 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/marrocos 02.jpg" alt="Livro 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/marrocos 03.jpg" alt="Livro 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco" id="curacao">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Curaçao" data-en="Curacao">Curaçao</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="Curaçao é uma das seleções mais recentes da história da Copa do Mundo, conquistando sua primeira classificação para o Mundial de 2026 e se tornando um dos menores países a disputar o torneio. Além do futebol, o país possui uma cultura extremamente diversa, marcada pela mistura de influências africanas, europeias e caribenhas. Curaçao é conhecido pelo idioma Papiamento, pelo carnaval vibrante, pelas músicas tradicionais como Tumba e Tambú, além de sua arquitetura colonial colorida e forte identidade multicultural.
+" data-en="Curaçao is one of the newest teams in World Cup history, having qualified for the 2026 World Cup for the first time and becoming one of the smallest countries to compete in the tournament. Beyond football, the country boasts an extremely diverse culture, marked by a blend of African, European, and Caribbean influences. Curaçao is known for its Papiamento language, vibrant carnival, traditional music such as Tumba and Tambú, as well as its colorful colonial architecture and strong multicultural identity.">
+                        Curaçao é uma das seleções mais recentes da história da Copa do Mundo, conquistando sua primeira
+                        classificação para o Mundial de 2026 e se tornando um dos menores países a disputar o torneio.
+                        Além do futebol, o país possui uma cultura extremamente diversa, marcada pela mistura de
+                        influências africanas, europeias e caribenhas. Curaçao é conhecido pelo idioma Papiamento, pelo
+                        carnaval vibrante, pelas músicas tradicionais como Tumba e Tambú, além de sua arquitetura
+                        colonial colorida e forte identidade multicultural.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/curaçao 01.jpg" alt="Livro 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/curaçao 02.jpg" alt="Livro 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/curaçao 04.jpg" alt="Livro 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco reverse" id="portugal">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Portugal" data-en="Portugal">Portugal</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="Portugal é uma das seleções mais tradicionais do futebol europeu, conhecida por revelar grandes jogadores como Cristiano Ronaldo, Luís Figo e Eusébio. O país conquistou destaque internacional ao vencer a Eurocopa de 2016 e possui participações marcantes em Copas do Mundo, com campanhas históricas como o terceiro lugar em 1966. Além do futebol, Portugal possui uma cultura rica ligada às grandes navegações, ao fado e à culinária tradicional. O país é famoso por cidades históricas como Lisboa e Porto, além de pratos típicos como bacalhau e os tradicionais pastéis de nata.
+" data-en="Portugal is one of the most traditional national teams in European football, known for producing great players such as Cristiano Ronaldo, Luís Figo, and Eusébio. The country gained international prominence by winning the 2016 European Championship and has had remarkable participations in World Cups, with historic campaigns such as third place in 1966. Beyond football, Portugal possesses a rich culture linked to the great navigations, fado music, and traditional cuisine. The country is famous for historic cities like Lisbon and Porto, as well as typical dishes such as codfish and the traditional custard tarts.">
+                        Portugal é uma das seleções mais tradicionais do futebol europeu, conhecida por revelar grandes
+                        jogadores como Cristiano Ronaldo, Luís Figo e Eusébio. O país conquistou destaque internacional
+                        ao vencer a Eurocopa de 2016 e possui participações marcantes em Copas do Mundo, com campanhas
+                        históricas como o terceiro lugar em 1966. Além do futebol, Portugal possui uma cultura rica
+                        ligada às grandes navegações, ao fado e à culinária tradicional. O país é famoso por cidades
+                        históricas como Lisboa e Porto, além de pratos típicos como bacalhau e os tradicionais pastéis
+                        de nata.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/portugal 01.jpg" alt="Livro 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/portugal 02.jpg" alt="Livro 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/inglaterra 03.jpg" alt="Livro 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="detalhe-bloco" id="japao">
+                <div class="detalhe-cabecalho">
+                    <h2 data-pt="Japão" data-en="Japan">Japão</h2>
+                    <div class="linha-decorativa"></div>
+                    <p data-pt="O Japão é uma seleção que cresceu muito no cenário da Copa do Mundo, conhecido por sua disciplina, velocidade e organização tática. O país participou de sua primeira Copa em 1998 e desde então se tornou presença frequente no torneio, conquistando vitórias históricas contra seleções tradicionais. Além do futebol, o Japão possui uma cultura rica e milenar, famosa por tradições como os samurais, templos, cerimônia do chá e festivais culturais. O país também é referência mundial em tecnologia, animes, culinária típica como sushi e ramen, além de cidades modernas como Tóquio e Osaka.
+" data-en="Japan is a team that has grown significantly in the World Cup scene, known for its discipline, speed, and tactical organization. The country participated in its first World Cup in 1998 and has since become a frequent presence in the tournament, achieving historic victories against traditional powerhouses. Beyond football, Japan boasts a rich and ancient culture, famous for traditions such as the samurai, temples, tea ceremony, and cultural festivals. The country is also a world leader in technology, anime, traditional cuisine like sushi and ramen, and modern cities such as Tokyo and Osaka.">
+                        O Japão é uma seleção que cresceu muito no cenário da Copa do Mundo, conhecido por sua
+                        disciplina, velocidade e organização tática. O país participou de sua primeira Copa em 1998 e
+                        desde então se tornou presença frequente no torneio, conquistando vitórias históricas contra
+                        seleções tradicionais. Além do futebol, o Japão possui uma cultura rica e milenar, famosa por
+                        tradições como os samurais, templos, cerimônia do chá e festivais culturais. O país também é
+                        referência mundial em tecnologia, animes, culinária típica como sushi e ramen, além de cidades
+                        modernas como Tóquio e Osaka.
+                    </p>
+                </div>
+                <div class="galeria-grid">
+                    <div class="foto-item"><img src="/exibicao/img/japao 001.jpg" alt="Recorde 1" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/japao 002.jpg" alt="Recorde 2" loading="lazy">
+                    </div>
+                    <div class="foto-item"><img src="/exibicao/img/japao 003.webp" alt="Recorde 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-luxe">
+        <div class="container text-center">
+            <p class="eyebrow" data-pt="Visite" data-en="Visit">Visite</p>
+            <h2 data-pt="PRONTO PARA ESTA EXPERIÊNCIA?" data-en="READY FOR THIS EXPERIENCE?">PRONTO PARA ESTA
+                EXPERIÊNCIA?</h2>
+            <p data-pt="Garanta seu ingresso e visite o maior museu da Copa do Mundo"
+                data-en="Guarantee your ticket and visit the largest World Cup museum">Garanta seu ingresso e visite o
+                maior museu da Copa do Mundo</p>
+            <a href="/ingresso/ingresso.html" class="btn btn-gold" data-pt="Comprar Ingresso"
+                data-en="Buy Ticket">Comprar Ingresso</a>
+        </div>
+    </section>
+
+    <div class="lightbox-modal" id="lightbox"
+        onclick="this.classList.remove('open'); document.body.style.overflow='auto'">
+        <img src="" alt="Imagem Expandida" id="lightbox-img">
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <div class="footer-section">
+                <h4 data-pt="Museu da Copa" data-en="World Cup Museum">Museu da Copa</h4>
+
+                <p data-pt="© 2026 Todos os direitos reservados." data-en="© 2026 All rights reserved.">
+                    © 2026 Todos os direitos reservados.
+                </p>
+
+                <p data-pt="1 MetLife Stadium Dr
+                 East Rutherford
+                 NJ 07073 - United States
+                "
+                    data-en="1 MetLife Stadium Dr 
+                     East Rutherford
+                      NJ 07073 - United States
+">
+1 MetLife Stadium Dr <br> East Rutherford <BR> NJ 07073 - United States
+
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-pt="Contato" data-en="Contact">Contato</h4>
+
+                <p>(11) 99999-9999</p>
+
+                <p data-pt="contato@museudacopa.com" data-en="contact@worldcupmuseum.com">
+                    museulegadomundial@gmail.com
+                </p>
+
+                <p data-pt="Terça a Domingo: 10h às 18h" data-en="Tuesday to Sunday: 10am to 6pm">
+                    Terça a Domingo: 10h às 18h
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-pt="Links" data-en="Links">Links</h4>
+
+                <a href="/rodape/politica.html" data-pt="Política de Privacidade" data-en="Privacy Policy">
+                    Política de Privacidade
+                </a>
+
+                <a href="/rodape/acessibilidade.html" data-pt="Acessibilidade" data-en="Accessibility">
+                    Acessibilidade
+                </a>
+
+                <a href="/rodape/termos.html" data-pt="Termos de Uso" data-en="Terms of Use">
+                    Termos de Uso
+                </a>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-pt="Redes" data-en="Social">Redes</h4>
+
+                <a href="#" data-pt="Instagram" data-en="Instagram">Instagram</a>
+                <a href="#" data-pt="Facebook" data-en="Facebook">Facebook</a>
+                <a href="#" data-pt="YouTube" data-en="YouTube">YouTube</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p data-pt="© Desenvolvido por legado mundial" data-en="© Developed by legado mundial">
+                © Desenvolvido por legado mundial
+            </p>
+        </div>
+    </footer>
+    <div id="modalPais" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="./exibicaoNova.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
+        PT
+    </button>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app'
+        );
+    </script>
+
+    <script>
+        let currentLang = "pt";
+
+        function toggleLanguage() {
+            const texto = document.getElementById("lang-text");
+
+            currentLang = currentLang === "pt" ? "en" : "pt";
+
+            document.querySelectorAll("[data-pt]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+
+            // 🔥 muda só o texto, NÃO o botão inteiro
+            texto.innerText = currentLang.toUpperCase();
+        }
+    </script>
+    <!-- Cole o código aqui -->
+    <button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
+
+        <!-- Ícone (fica fixo) -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 8l6 6" />
+            <path d="M4 14l6-6 2-3" />
+            <path d="M2 5h12" />
+            <path d="M22 22l-5-10-5 10" />
+        </svg>
+
+        <!-- Texto (vai mudar) -->
+        <span id="lang-text">PT</span>
+
+    </button>
+
+    <button onclick="ativarLeitor()" id="btnLeitor">
+        <div class="btn-inner" id="iconeContainer">
+            <!-- Ícone de Som (SVG) -->
+            <svg id="svgSom" viewBox="0 0 24 24">
+                <path
+                    d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16.03C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+            </svg>
+        </div>
+    </button>
+
+    <script>
+        let leitorAtivo = false;
+        let ultimoTexto = "";
+        let timeout;
+
+        // Ativar / desativar
+        function ativarLeitor() {
+            leitorAtivo = !leitorAtivo;
+            const container = document.getElementById("iconeContainer");
+
+            // Ícones em formato SVG
+            const iconSom = '<svg viewBox="0 0 24 24"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16.03C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg>';
+            const iconMudo = '<svg viewBox="0 0 24 24"><path d="M12,4L9.91,6.09L12,8.18V4M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04 14.83,18.46 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L4.27,3M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.48,12.43 16.5,12.22 16.5,12Z" /></svg>';
+
+            // Troca o visual
+            container.innerHTML = leitorAtivo ? iconMudo : iconSom;
+
+            // Faz ele falar o estado atual
+            const aviso = leitorAtivo ? "Leitor ativado" : "Leitor desativado";
+
+            // Força a fala do aviso ignorando a trava de "texto repetido"
+            ultimoTexto = "";
+            falar(aviso)
+        }
+        // Função de fala
+        function falar(texto) {
+            if (!texto || texto === ultimoTexto) return;
+
+            ultimoTexto = texto;
+
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                const fala = new SpeechSynthesisUtterance(texto);
+                fala.lang = "pt-BR";
+                speechSynthesis.cancel();
+                speechSynthesis.speak(fala);
+            }, 300); // pequeno atraso pra evitar spam
+        }
+        // Pegar texto inteligente
+        function pegarTexto(el) {
+            if (!el) return "";
+
+            return (
+                el.getAttribute("aria-label") ||
+                el.alt ||
+                el.placeholder ||
+                el.title ||
+                el.innerText
+            );
+        }
+        // Mouse mais preciso
+        document.addEventListener("mousemove", function (e) {
+            if (!leitorAtivo) return;
+
+            const elemento = document.elementFromPoint(e.clientX, e.clientY);
+
+            if (!elemento) return;
+
+            // Só elementos importantes
+            if (elemento.matches("button, a, p, h1, h2, h3, span, img, input, label")) {
+                const texto = pegarTexto(elemento);
+                falar(texto);
+            }
+        });
+        // Toque no celular
+        document.addEventListener("touchstart", function (e) {
+            if (!leitorAtivo) return;
+
+            const elemento = e.target;
+
+            if (elemento.matches("button, a, p, h1, h2, h3, span, img, input, label")) {
+                const texto = pegarTexto(elemento);
+                falar(texto);
+            }
+        });
+    </script>
+
+</html>

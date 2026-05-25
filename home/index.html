@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu da Copa | Legado Mundial</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/global.css">
+</head>
+
+
+
+
+
+<div id="cookieBanner" class="cookie-banner" role="dialog" aria-live="polite">
+
+    <div class="cookie-text">
+       <strong
+            data-pt="Privacidade e Cookies"
+            data-en="Privacy and Cookies">
+            Privacidade e Cookies
+        </strong>
+
+        <p
+        data-pt="Utilizamos cookies para melhorar sua experiência, analisar o tráfego e personalizar conteúdo. Você pode aceitar ou recusar. Veja nossa Política de Privacidade."
+        data-en="We use cookies to improve your experience, analyze traffic, and personalize content. You can accept or decline them. See our Privacy Policy.">
+
+            Utilizamos cookies para melhorar sua experiência, analisar o tráfego e personalizar conteúdo.
+            Você pode aceitar ou recusar. Veja nossa
+
+            <a href="/rodape/politica.html"
+            data-pt="Política de Privacidade"
+            data-en="Privacy Policy">
+                Política de Privacidade
+            </a>.
+
+        </p>
+    </div>
+
+        <div class="cookie-actions">
+
+            <button
+                class="btn-reject"
+                onclick="recusarCookies()"
+                data-pt="Recusar"
+                data-en="Decline">
+                Recusar
+            </button>
+
+            <button
+                class="btn-accept"
+                onclick="aceitarCookies()"
+                data-pt="Aceitar"
+                data-en="Accept">
+                Aceitar
+            </button>
+
+        </div>
+
+    </div>
+
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- NAVBAR (SEM ALTERAÇÃO) -->
+    <!-- NAVBAR -->
+    <nav class="navbar-1">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div class="logo" data-pt="Legado Mundial" data-en="World Legacy">Legado Mundial</div>
+            <!-- BOTÃO MOBILE -->
+            <button class="menu-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#menu">
+                ☰
+            </button>
+            <ul id="menu" class="menu collapse d-lg-flex">
+                <li><a href="index.html" data-pt="Início" data-en="Home">Início</a></li>
+                <li><a href="/museu/museu.html" data-pt="Museu" data-en="Museum">Museu</a></li>
+                <li><a href="/eventos/eventos.html" data-pt="Eventos" data-en="Events">Eventos</a></li>
+                <li><a href="/exibicao/exibicaoNova.html" data-pt="Exibição" data-en="Exhibition">Exibição</a></li>
+                <li>
+                    <a href="/ingresso/ingresso.html">
+                        <button class="btn btn-red" data-pt="Ingressos" data-en="Tickets">Ingressos</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <!-- FUNDO -->
+        <div class="hero-bg" id="hero-bg"></div>
+        <!-- ESCURECER FUNDO -->
+        <div class="hero-overlay"></div>
+        <!-- CONTEÚDO -->
+        <div class="container-luxe hero-content">
+            <!-- TEXTO PEQUENO -->
+                <p class="eyebrow"
+                data-pt="Museu da Copa do Mundo · 2026"
+                data-en="FIFA World Cup Museum · 2026">
+                    Museu da Copa do Mundo · 2026
+                </p>
+
+                <h1 class="hero-title">
+                    <span data-pt="O SANGUE" data-en="THE BLOOD">O SANGUE</span><br>
+
+                    <span data-pt="O SUOR" data-en="THE SWEAT">O SUOR</span><br>
+
+                    <span class="text-gradient-gold"
+                        data-pt="A glória"
+                        data-en="The glory">
+                        A glória
+                    </span>
+                </h1>
+
+                <p class="hero-sub"
+                data-pt="Atravesse 96 anos de Copas do Mundo em uma experiência imersiva."
+                data-en="Travel through 96 years of World Cups in an immersive experience.">
+                    Atravesse 96 anos de Copas do Mundo em uma experiência imersiva.
+                </p>
+
+                <a href="/ingresso/ingresso.html"
+                class="btn-gold"
+                data-pt="Garantir Ingresso →"
+                data-en="Get Tickets →">
+                    Garantir Ingresso →
+                </a>
+
+                <a href="/exibicao/exibicaoNova.html"
+                class="btn-outline-gold"
+                data-pt="Explorar Galeria"
+                data-en="Explore Gallery">
+                    Explorar Galeria
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- ÁREA DAS TAÇAS -->
+    <section class="trophy-section">
+        <!-- EFEITO DOURADO -->
+        <div class="trophy-bg-gold"></div>
+        <!-- TITULO -->
+        <div class="container-luxe reveal" style="text-align:center;margin-bottom:3rem;">
+            <p class="eyebrow"
+                data-pt="Símbolo Eterno"
+                data-en="Eternal Symbol">
+                    Símbolo Eterno
+                </p>
+
+                <h2 class="big-display">
+
+                    <span
+                        data-pt="A TAÇA QUE"
+                        data-en="THE TROPHY THAT">
+                        A TAÇA QUE
+                    </span>
+
+                    <span class="text-gradient-gold"
+                        data-pt="MOVE O MUNDO"
+                        data-en="MOVES THE WORLD">
+                        MOVE O MUNDO
+                    </span>
+
+                </h2>
+        </div>
+
+        <!-- CARROSSEL -->
+        <div class="carousel-stage">
+            <!-- IMAGENS DAS TAÇAS -->
+            <div class="carousel-spin" id="carousel-spin">
+            </div>
+            <!-- CHÃO -->
+            <div class="carousel-ground"></div>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div class="container-luxe">
+            <!-- TITULO -->
+            <div class="reveal" style="text-align:center;margin-bottom:5rem">
+               <p class="eyebrow"
+                    data-pt="Destaques do Museu"
+                    data-en="Museum Highlights">
+                        Destaques do Museu
+                </p>
+
+                    <h2 class="big-display" style="margin-top:1rem">
+
+                        <span
+                            data-pt="ARTEFATOS"
+                            data-en="LEGENDARY">
+                            ARTEFATOS
+                        </span>
+
+                        <span class="font-editorial text-gradient-gold"
+                            data-pt="lendários"
+                            data-en="ARTIFACTS">
+                            lendários
+                        </span>
+
+                    </h2>
+            <div class="gold-divider" style="margin-top:2rem"></div>
+        </div>
+
+            <!-- GRID DOS CARDS -->
+            <div class="highlights-grid">
+                <!-- CARD 1 -->
+                <article class="card-luxe highlight reveal">
+                    <div class="highlight-img">
+                        <img src="img/sala de trofeus1.png" alt="Sala dos Troféus">
+                        <div class="highlight-grad"></div>
+                    </div>
+                    <div class="highlight-body">
+                     <h3 data-pt="Sala dos Troféus" data-en="Trophy Room">
+                            Sala dos Troféus
+                        </h3>
+
+                        <p
+                        data-pt="Réplicas oficiais e o brilho de cada taça erguida desde 1930."
+                        data-en="Official replicas and the shine of every trophy lifted since 1930.">
+                        Réplicas oficiais e o brilho de cada taça erguida desde 1930.
+                        </p>
+                        <!-- BOTÃO -->
+                                <a href="/museu/museu.html"
+                                class="highlight-cta"
+                                data-pt="Conhecer →"
+                                data-en="Explore →">
+                                    Conhecer →
+                                </a>
+                    </div>
+                </article>
+
+                <!-- CARD 2 -->
+                <article class="card-luxe highlight reveal">
+                    <div class="highlight-img">
+                        <img src="img/camisas lendarias1.png" alt="Camisas Históricas">
+                        <div class="highlight-grad"></div>
+                    </div>
+                    <div class="highlight-body">
+                        <h3 data-pt="Camisas Históricas" data-en="Historic Jerseys">
+                            Camisas Históricas
+                        </h3>
+
+                        <p
+                        data-pt="Uniformes lendários de 1930 até 2026."
+                        data-en="Legendary uniforms from 1930 to 2026.">
+                        Uniformes lendários de 1930 até 2026.
+                        </p>
+                        <!-- BOTÃO -->
+                       <a href="/museu/museu.html"
+                            class="highlight-cta"
+                            data-pt="Conhecer →"
+                            data-en="Explore →">
+                                Conhecer →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- CARD 3 -->
+                <article class="card-luxe highlight reveal">
+                    <div class="highlight-img">
+                        <img src="img/lendas01.png" alt="Salão das Lendas">
+                        <div class="highlight-grad"></div>
+                    </div>
+                    <div class="highlight-body">
+                        <h3 data-pt="Salão das Lendas" data-en="Hall of Legends">
+                            Salão das Lendas
+                        </h3>
+
+                        <p
+                        data-pt="Histórias dos maiores jogadores da história."
+                        data-en="Stories of the greatest players in history.">
+                        Histórias dos maiores jogadores da história.
+                        </p>
+                        <!-- BOTÃO -->
+                       <a href="/museu/museu.html"
+                            class="highlight-cta"
+                            data-pt="Conhecer →"
+                            data-en="Explore →">
+                                Conhecer →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-bg"></div>
+        <div class="stats-overlay"></div>
+        <div class="container-luxe stats-grid">
+            <div class="reveal">
+                <div class="stat-num text-gradient-gold">96</div>
+                <p
+                data-pt="Anos de história"
+                data-en="Years of history">
+                    Anos de história
+                </p>
+
+                </div>
+
+                <div class="reveal" data-delay="80">
+                    <div class="stat-num text-gradient-gold">22</div>
+
+                    <p
+                    data-pt="Edições"
+                    data-en="Editions">
+                        Edições
+                    </p>
+                </div>
+
+                <div class="reveal" data-delay="160">
+                    <div class="stat-num text-gradient-gold">+2K</div>
+
+                    <p
+                    data-pt="Artefatos"
+                    data-en="Artifacts">
+                        Artefatos
+                    </p>
+                </div>
+
+                <div class="reveal" data-delay="240">
+                    <div class="stat-num text-gradient-gold">8</div>
+
+                    <p
+                    data-pt="Países campeões"
+                    data-en="Champion nations">
+                        Países campeões
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container-luxe">
+            <div class="reveal card-luxe cta-card">
+                <div class="cta-glow"></div>
+                <div class="cta-inner">
+                    <p class="eyebrow"
+                    data-pt="Sua jornada começa aqui"
+                    data-en="Your journey begins here">
+                        Sua jornada começa aqui
+                    </p>
+
+                    <h2 class="cta-title">
+
+                        <span
+                            data-pt="VENHA VIVER A HISTÓRIA,"
+                            data-en="COME LIVE THE HISTORY,">
+                            VENHA VIVER A HISTÓRIA,
+                        </span>
+
+                        <span class="text-gradient-gold font-editorial"
+                            style="font-style:italic"
+                            data-pt="não apenas vê-la."
+                            data-en="don't just watch it.">
+                            não apenas vê-la.
+                        </span>
+
+                    </h2>
+                    <a href="/ingresso/ingresso.html"
+                    class="btn-gold">
+
+                        <span
+                            data-pt="Reservar Visita"
+                            data-en="Book Your Visit">
+                            Reservar Visita
+                        </span>
+
+                        <svg viewBox="0 0 24 24"
+                            width="16"
+                            height="16"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <!-- Coluna 1 -->
+            <div class="footer-section">
+                <h4 data-pt="Museu da Copa" data-en="World Cup Museum">Museu da Copa</h4>
+                <p data-pt="© 2026 Todos os direitos reservados." data-en="© 2026 All rights reserved.">
+                    © 2026 Todos os direitos reservados.
+                </p>
+                <p data-pt="1 MetLife Stadium Dr
+                 East Rutherford
+                  NJ 07073 - United States
+                " data-en="1 MetLife Stadium Dr
+                 East Rutherford
+                 NJ 07073 - United States
+                ">
+                1 MetLife Stadium Dr <br> East Rutherford <BR> NJ 07073 - United States
+
+                </p>
+            </div>
+
+            <!-- Coluna 2 -->
+            <div class="footer-section">
+                <h4 data-pt="Contato" data-en="Contact">Contato</h4>
+                <p>(11) 99999-9999</p>
+                <p>museulegadomundial@gmail.com</p>
+                <p data-pt="Terça a Domingo: 10h às 18h" data-en="Tuesday to Sunday: 10 AM - 6 PM">
+                    Terça a Domingo: 10h às 18h
+                </p>
+            </div>
+
+            <!-- Coluna 3 -->
+            <div class="footer-section">
+                <h4 data-pt="Links" data-en="Links">Links</h4>
+                <a href="/rodape/politica.html" data-pt="Política de Privacidade" data-en="Privacy Policy">
+                    Política de Privacidade
+                </a>
+                <a href="/rodape/acessibilidade.html" data-pt="Acessibilidade" data-en="Accessibility">
+                    Acessibilidade
+                </a>
+                <a href="/rodape/" data-pt="Termos de Uso" data-en="Terms of Use">
+                    Termos de Uso
+                </a>
+            </div>
+
+            <!-- Coluna 4 -->
+            <div class="footer-section">
+                <h4 data-pt="Redes" data-en="Social Media">Redes</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+           <div class="footer-bottom">
+            <p data-pt="© Desenvolvido por legado mundial"
+                data-en="© Developed by legado mundial">
+                © Desenvolvido por legado mundial
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Seu JS -->
+    <script src="/home/carousel.js"></script>
+    <script src="home.js"></script>
+
+
+    <button onclick="ativarLeitor()" id="btnLeitor">
+        <div class="btn-inner" id="iconeContainer">
+            <!-- Ícone de Som (SVG) -->
+            <svg id="svgSom" viewBox="0 0 24 24">
+                <path
+                    d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16.03C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+            </svg>
+        </div>
+    </button>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
+
+        <!-- Ícone (fica fixo) -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 8l6 6" />
+            <path d="M4 14l6-6 2-3" />
+            <path d="M2 5h12" />
+            <path d="M22 22l-5-10-5 10" />
+        </svg>
+
+        <!-- Texto (vai mudar) -->
+        <span id="lang-text">PT</span>
+
+    </button>
+</body>
+
+
+</html>
